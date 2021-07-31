@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gestion de stage | Administrateur</title>
+		<!-- les liens de style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<!-- le lien de font-awesome -->
+		<script src="js/all.min.js"></script>
+	</head>
+	<body>
+	
+		<!--
+            Hey les devs, vous allez bien ?
+            Juste nous amuser un peu avec ce front-end sur la gestion de stage.
+            Allez, commençons svp, inutile de beaucoup manger 😎
+            De : Seymour !
+        -->
+        
+        <div >Gestion de stage</div>
+
+        <section id="admin">
+            <div class="admin-wrapper">
+                <div class="add">
+
+                    <div class="admin-box">
+                        <h3 class="title">Ajouter un stage</h3>
+                        <p class="text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eum
+                            sequi perferendis dolor. Molestias, voluptates?
+                        </p>
+                        <button
+                            type="button"
+                            class="btn btn-login"
+                            data-bs-toggle="modal"
+                            data-bs-target="#stage-modal"
+                        >
+                            Ajouter
+                        </button>
+                        
+                    </div>
+
+                    <!-- ajouter un stagiaire ici -->
+                    <div class="admin-box">
+                        <h3 class="title">Ajouter un stagiaire</h3>
+                        <p class="text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eum
+                            sequi perferendis dolor. Molestias, voluptates?
+                        </p>
+                        <button
+                            type="button"
+                            class="btn btn-login"
+                            data-bs-toggle="modal"
+                            data-bs-target="#stagiaire-modal"
+                        >
+                            Ajouter
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- ajouter un stage -->
+                <div class="add">
+
+                    <!-- ajouter un professeur -->
+                    <div class="admin-box">
+                        <h3 class="title">Ajouter un professeur</h3>
+                        <p class="text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eum
+                            sequi perferendis dolor. Molestias, voluptates?
+                        </p>
+                        <button
+                            type="button"
+                            class="btn btn-login"
+                            data-bs-toggle="modal"
+                            data-bs-target="#prof-modal"
+                        >
+                            Ajouter
+                        </button>
+                    </div>
+
+
+                    <!-- ajouter un cours -->
+                    <div class="admin-box">
+                        <h3 class="title">Ajouter un cours</h3>
+                        <p class="text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eum
+                            sequi perferendis dolor. Molestias, voluptates?
+                        </p>
+                        <button
+                            type="button"
+                            class="btn btn-login"
+                            data-bs-toggle="modal"
+                            data-bs-target="#course-modal"
+                        >
+                            Ajouter
+                        </button>
+                    </div>
+            </div>
+        </section>
+
+        <!-- LES POP UP SERONT ICI -->
+
+        <!-- ajouter un stagiaire -->
+        <div
+            class="modal fade"
+            id="stagiaire-modal"
+            tabindex="-1"
+            aria-labelledby="stagiaireModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="stagiaireModalLabel">Ajouter un stagiaire</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="nom"
+                                    class="form-control"
+                                    placeholder="Nom du stagiaire"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="postnom"
+                                    class="form-control"
+                                    placeholder="Post-nom du stagiaire"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="prenom"
+                                    class="form-control"
+                                    placeholder="Prenom du stagiaire"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <label for="prénom" class="form-label">Sexe</label>
+                                <select class="form-select" name="sexe" aria-label="Default select example">
+                                    <option selected value="F">Féminin</option>
+                                    <option value="M">Masculin</option>
+                                </select>
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="date" name="date_naissance"
+                                    class="form-control"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="adresse"
+                                    class="form-control"
+                                    placeholder="Adresse du stagiaire"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="tel" name="telephone"
+                                    class="form-control"
+                                    placeholder="Téléphone du stagiaire"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <label for="prénom" class="form-label">Stage</label>
+                                <select class="form-select" name="stage_id" aria-label="Default select example">
+                                    <option>Choisissez un stage</option>
+                                    <option>Académique</option>
+                                    <option>Professionnel</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-login">Ajouter le stagiaire</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="stage-modal"
+            tabindex="-1"
+            aria-labelledby="stageModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="stageModalLabel">Ajouter un stage</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="libelle"
+                                    class="form-control"
+                                    placeholder="Libellé du stage"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="caracteristique"
+                                    class="form-control"
+                                    placeholder="Caracteristique du stage"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="date" name="date_debut"
+                                    class="form-control"
+                                    placeholder="Date de début du stage"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="date" name="date_fin"
+                                    class="form-control"
+                                    placeholder="Date de fin du stage"
+                                />
+                            </div>
+                            <button type="submit" class="btn btn-login">Ajouter le stage</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- course modal -->
+        <div class="modal fade" id="course-modal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="courseModalLabel">Ajouter un cours</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="libelle"
+                                    class="form-control"
+                                    placeholder="Libellé du cours"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="domaine"
+                                    class="form-control"
+                                    placeholder="Domaine du cours"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <select name="stage_id" id="stage_id" class="form-select">
+                                    <option>Choisissez un stage</option>
+                                    <option>Académique</option>
+                                    <option>Professionnel</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <select name="professeur_id" id="professeur_id" class="form-select">
+                                    <option>Choisissez un professeur</option>
+                                    <option>Gift Bambi</option>
+                                    <option>Marcelo Senga</option>
+                                    <option>Medi Kaka</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-login">Ajouter le cours</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- professor modal -->
+        <div class="modal fade" id="prof-modal" tabindex="-1" aria-labelledby="profModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="courseModalLabel">Ajouter un professeur</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="matricule"
+                                    class="form-control"
+                                    placeholder="Matricule du professeur"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="nom"
+                                    class="form-control"
+                                    placeholder="Nom du professeur"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="postnom"
+                                    class="form-control"
+                                    placeholder="Post-nom du professeur"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="prenom"
+                                    class="form-control"
+                                    placeholder="Prenom du professeur"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="telephone"
+                                    class="form-control"
+                                    placeholder="Téléphone du professeur"
+                                />
+                            </div>
+                            <!-- un champ de remplissage -->
+                            <div class="mb-3">
+                                <input
+                                    type="text" name="adresse"
+                                    class="form-control"
+                                    placeholder="Adresse du professeur"
+                                />
+                            </div>
+                            <button type="submit" class="btn btn-login">Ajouter le professeur</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<!-- jQuery et les differents fichiers js -->
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
